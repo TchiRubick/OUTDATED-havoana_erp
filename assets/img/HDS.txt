@@ -1,0 +1,21 @@
+Havoana Digital Solution
+
+1-Initial (H)
+2-Representé par un graphique en forme de donnée informatique
+3-En fond (Colline) pour represanter Havoana
+ 
+Couleur
+#138496 Bleu
+#0b2b51 Bleu nuit
+(#E0A800 Jaune)
+#0069D9 Turquoise
+
+Font
+Alien Encounters
+Capetown Signature
+
+Livraison
+JPEG 72dpi
+JPEG 300dpi
+PNG 300 x 80
+PNG 600 x 160
