@@ -75,10 +75,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => 'root',
-	'password' => '',
-	'database' => 'havoanac_main',
+	'hostname' => $_SERVER['DB_HOST'],
+	'username' => $_SERVER['DB_USERNAME'],
+	'password' => $_SERVER['DB_PASSWORD'],
+	'database' => $_SERVER['DB_DATABASE'],
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
