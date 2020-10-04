@@ -31,7 +31,7 @@ class Home extends CI_Controller
         $this->form_validation->set_rules('password', '', 'trim|required');
 
         $request = $this->input->post();
-        var_dump($request);die;
+        
         if ($this->form_validation->run() === FALSE) {
             return $sendError($request, self::$AUTH_ERR_MESSAGE);
         }
@@ -50,7 +50,7 @@ class Home extends CI_Controller
         $this->session->set_userdata("IDS", $this->dbswitcher->ide);
         $this->session->set_userdata("SOC", $this->dbswitcher->codeSoc);
         $this->session->set_userdata("LOGIN", $request['login']);
-
+        die('here');
         return redirect('Dashboard');
     }
 
