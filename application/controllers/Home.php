@@ -30,7 +30,7 @@ class Home extends CI_Controller
         $this->form_validation->set_rules('login', '', 'trim|required');
         $this->form_validation->set_rules('password', '', 'trim|required');
 
-        $request = $this->input->post();
+        $request = $_POST;
         var_dump($reauest);die;
         if ($this->form_validation->run() === FALSE) {
             return $sendError($request, self::$AUTH_ERR_MESSAGE);
