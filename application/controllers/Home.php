@@ -12,7 +12,7 @@ class Home extends CI_Controller
 
     public function index()
     {
-        $this->session->sess_destroy();
+        unset($_SESSION);
         $this->load->view('home');
     }
 
@@ -25,12 +25,13 @@ class Home extends CI_Controller
             return $this->index();
         };
 
+        
         $this->form_validation->set_rules('societe', '', 'trim|required|callback_existSociete');
         $this->form_validation->set_rules('login', '', 'trim|required');
         $this->form_validation->set_rules('password', '', 'trim|required');
 
         $request = $this->input->post();
-
+        var_dump($reauest);die;
         if ($this->form_validation->run() === FALSE) {
             return $sendError($request, self::$AUTH_ERR_MESSAGE);
         }
