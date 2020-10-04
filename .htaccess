@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteCond %{REQUEST_URI} !(index.php|x-folder|ci2) [NC]
+RewriteRule ^ /index.php [L]
