@@ -50,7 +50,7 @@ class Home extends CI_Controller
         $this->session->set_userdata("IDS", $this->dbswitcher->ide);
         $this->session->set_userdata("SOC", $this->dbswitcher->codeSoc);
         $this->session->set_userdata("LOGIN", $request['login']);
-        die('here');
+        
         return redirect('Dashboard');
     }
 
