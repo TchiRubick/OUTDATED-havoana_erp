@@ -14,11 +14,11 @@
                     <div class="card-body">
                         <div class="form-group">
                             <label for="nom">Nom produit <b class="text-danger">*</b></label>
-                            <input type="text" class="form-control" name="nom" id="nom" placeholder="" value="<?php echo $input['nom'] ?>">
+                            <input type="text" class="form-control" name="nom" id="nom" placeholder="" value="<?php echo !isset($input['nom']) ? '' : $input['nom'] ?>">
                         </div>
                         <div class="form-group">
                             <label for="codebarre">Code-Barre <b class="text-danger">*</b></label>
-                            <input type="text" class="form-control" name="codebarre" id="codebarre" placeholder="" value="<?php echo $input['codebarre'] ?>">
+                            <input type="text" class="form-control" name="codebarre" id="codebarre" placeholder="" value="<?php echo !isset($input['codebarre']) ? '' : $input['codebarre'] ?>">
                             <small id="codebarreExist">
                                 <div id="verifRun" style="display:none;">
                                     <div class="spinner-border spinner-border-sm text-info" role="status"></div> Verification du code-barre
@@ -38,15 +38,15 @@
                         </div>
                         <div class="form-group">
                             <label for="quantite">Quantité <b class="text-danger">*</b></label>
-                            <input type="number" min="1" class="form-control" name="quantite" id="quantite" value="<?php echo $input['quantite'] ?>">
+                            <input type="number" min="1" class="form-control" name="quantite" id="quantite" value="<?php echo !isset($input['quantite']) ? '' : $input['quantite'] ?>">
                         </div>
                         <div class="form-group">
                             <label for="prixa">Prix d'achat unitaire</label>
-                            <input type="number" min="1" class="form-control" name="prixa" id="prixa" value="<?php echo $input['prixa'] ?>">
+                            <input type="number" min="1" class="form-control" name="prixa" id="prixa" value="<?php echo !isset($input['prixa']) ? '' : $input['prixa'] ?>">
                         </div>
                         <div class="form-group">
                             <label for="prixv">Prix de vente unitaire <b class="text-danger">*</b></label>
-                            <input type="number" min="1" class="form-control" name="prixv" id="prixv" value="<?php echo $input['prixv'] ?>">
+                            <input type="number" min="1" class="form-control" name="prixv" id="prixv" value="<?php echo !isset($input['prixv']) ? '' : $input['prixv'] ?>">
                         </div>
                         <input type="hidden" name="action" value="add">
                         <small id="codebarreHelp" class="form-text text-mute">
