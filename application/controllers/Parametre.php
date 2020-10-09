@@ -40,7 +40,7 @@ class Parametre extends MY_Controller
 	{
 		$this->_PARAM = self::$PAGE_gestion_device;
 
-		$utilisateur = $this->_objUtl->getAllAgentCaisse();
+		$utilisateur = $this->_objUtl->getAllAgentCaisseNotSup();
 		$this->_PARAM["options_user"] = optionFormatter($utilisateur);
 
 		$magasins = $this->_objMag->getMagOptionNotStock();
@@ -113,6 +113,9 @@ class Parametre extends MY_Controller
 					$this->xhrResponse(false, $this->_objDvc->_errorMessage);
 				}
 			}
+
+			// Set support everytime in list
+			$this->_objDvc->setListeUser(SUPPORT_IDUSER, $idd, $lm);
 		}
 
 		$this->transacModification($this->_idu);

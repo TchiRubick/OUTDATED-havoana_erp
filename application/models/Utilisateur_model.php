@@ -56,10 +56,32 @@ class Utilisateur_model extends CI_Model implements IUtilisateur
         return $result;
     }
 
-    public function getAllUser()
+    public function getAllAgentCaisseNotSup()
     {
         $result = [];
 
+        $requete = " SELECT utl_idexterne AS value, utl_login AS libelle FROM sys_utilisateur "
+            . " INNER JOIN sys_role ON rl_idexterne = utl_role "
+            . " WHERE rl_code <> 'SUP'";
+
+        try {
+            $query = $this->_db->query($requete);
+
+            if (!$query) throw new Exception();
+
+            $result = $query->result_array();
+        } catch (\Exception $e) {
+            $this->_errorMessage = $e->getMessage();
+            log_message('ERROR', 'Utilisateur_model: getAllAgentCaisseNotSup() : ' . $requete . ' {} ' . $e->getMessage());
+        }
+
+        return $result;
+    }
+
+    public function getAllUser()
+    {
+        $result = [];
+        echo IUtilisateur::QUERY_SELECT_ALL_NOT_SUP;die;
         try {
             $query = $this->_db->query(IUtilisateur::QUERY_SELECT_ALL_NOT_SUP);
 

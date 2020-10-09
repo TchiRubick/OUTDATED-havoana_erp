@@ -171,8 +171,8 @@ class Device_model extends CI_Model implements IDevice
     {
         $result = true;
 
-        $requete = " DELETE t_devices, tr_maguserdevice FROM t_devices INNER JOIN tr_maguserdevice ON tr_maguserdevice.magudvc_device = t_devices.dvc_idexterne WHERE dvc_idexterne = ? ";
-
+        $requete = " DELETE t_devices, tr_maguserdevice FROM t_devices LEFT JOIN tr_maguserdevice ON tr_maguserdevice.magudvc_device = t_devices.dvc_idexterne WHERE dvc_idexterne = ? ";
+       
         try {
             $query = $this->_db->query($requete, [$ide]);
 
