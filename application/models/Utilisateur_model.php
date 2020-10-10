@@ -81,7 +81,7 @@ class Utilisateur_model extends CI_Model implements IUtilisateur
     public function getAllUser()
     {
         $result = [];
-        echo IUtilisateur::QUERY_SELECT_ALL_NOT_SUP;die;
+        
         try {
             $query = $this->_db->query(IUtilisateur::QUERY_SELECT_ALL_NOT_SUP);
 
