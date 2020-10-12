@@ -91,7 +91,7 @@ define('SMTP_PORT', '587');
 define('SMTP_FROM', 'support@havoana.com');
 define('SMTP_NAME', 'Support Havoana');
 
-define('WS_HOST', 'http://192.168.56.101:8181/');
+define('WS_HOST', $_SERVER["WS_HOST"]);
 
 define("API_KEY", "yDKLw1JbBPYzVO3lSSK3y3dkCBF0FDIW");
 define("SUPPORT_IDUSER", "eba8c575-27b9-4ca0-982a-d47caa73a1d4");
