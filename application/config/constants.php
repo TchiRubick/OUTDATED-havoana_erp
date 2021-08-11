@@ -93,5 +93,5 @@ define('SMTP_NAME', 'Support Havoana');
 
 define('WS_HOST', $_SERVER["WS_HOST"]);
 
-define("API_KEY", "yDKLw1JbBPYzVO3lSSK3y3dkCBF0FDIW");
+define("API_KEY", "");
 define("SUPPORT_IDUSER", "eba8c575-27b9-4ca0-982a-d47caa73a1d4");
