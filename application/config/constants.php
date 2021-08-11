@@ -84,14 +84,14 @@ defined('EXIT_DATABASE')       OR define('EXIT_DATABASE', 8); // database error
 defined('EXIT__AUTO_MIN')      OR define('EXIT__AUTO_MIN', 9); // lowest automatically-assigned error code
 defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest automatically-assigned error code
 
-define('SMTP_HOST', 'mail.havoana.com');
-define('SMTP_USER', 'support@havoana.com');
-define('SMTP_PASS', 'TK4UF98ZISAE');
-define('SMTP_PORT', '587');
-define('SMTP_FROM', 'support@havoana.com');
-define('SMTP_NAME', 'Support Havoana');
+define('SMTP_HOST', '');
+define('SMTP_USER', '');
+define('SMTP_PASS', '');
+define('SMTP_PORT', '');
+define('SMTP_FROM', '');
+define('SMTP_NAME', '');
 
 define('WS_HOST', $_SERVER["WS_HOST"]);
 
 define("API_KEY", "");
-define("SUPPORT_IDUSER", "eba8c575-27b9-4ca0-982a-d47caa73a1d4");
+define("SUPPORT_IDUSER", "");
